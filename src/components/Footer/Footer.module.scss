@@ -1,0 +1,62 @@
+//独立地完成了整个程序从分析、设计到编码的所有工作。
+//如果在上述过程中，遇到了什么困难而求教于人，那么，将在实习总结报告中完整列举所遇到的问题，以及别人给的提示。
+//201931774122邓睿
+
+@import '../../styles/contants.scss';
+
+.wrapper{
+    background: #fff;
+    .container{
+
+        @media (max-width: $sm) {
+            flex-direction: column;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+        gap: 2rem;
+
+        .left{
+            flex: 3;
+
+            >*{
+                display: block;
+            }
+
+            >:nth-child(1){
+                margin-top: 3rem;
+                a{
+                    text-decoration: underline;
+                    color: orange;
+                }
+            }
+        }
+
+        .right{
+            flex: 1;
+            .info{
+                margin-bottom: 1rem;
+                >*{
+                    display: block;
+                }
+            }
+
+            .menu{
+                @media (max-width: $sm) {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                list-style: none;
+
+                li{
+                    cursor: pointer;
+                    &:hover{
+                        color: $secondary;
+                    }
+                }
+            }
+        }
+    }
+}
